@@ -1,20 +1,73 @@
-body{
-    background-color: #FDDAF3;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: fixed;
-    padding: 0;
+/*mobile*/
+body {
+    font-family: 'noto';
     margin: 0;
+    padding: 0;
+    background-color: #FDDAF3;
+}
+
+*{
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.start{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-top: 15px;
+}
+
+.logo, .zone{
+    max-width: 150px;
+    padding-left: 15px
+}
+
+.game-title{
+    margin-top: auto;
+    
+}
+.title{
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+button{
+    background-color: transparent;
+    border: 0px;
+    width:100%;
+    padding: 2.5% 5%;
+}
+
+.cover-bottom{
+    margin-top: auto;
+}
+
+.cover-bottom img{
+    width: 100%;
+    height: auto;
+}
+
+button.submit, button.playAgain{
+    max-width: 75%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.startbtn{
+    max-width: 250px;
 }
 
 #board{
     width: 300px;
     height: 300px;
-    border: 2px solid black;
     margin: 0 auto;
     margin-bottom: 5%;
     display: flex;
@@ -24,20 +77,91 @@ body{
 #board img{
     width: 98px;
     height: 148px;
-    border: 1px solid white;
+    cursor: pointer;
 }
 
 #pieces{
     width: 305px;
     height: 302px;
     gap: 1%;
-    border: 2px solid black;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 #pieces img{
+    cursor: pointer;
+    z-index: 1;
     width: 99px;
     height: 149px;
+}
+
+.instruction {
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.instruction p{
+    margin: 0;
+}
+
+.done{
+    opacity: 100%;
+}
+
+.guide{
+    opacity: 30%;
+}
+
+.final{
+    height: 100vh;
+    width: 100%;
+}
+.final .end{
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
+}
+button.playAgain{
+    margin-top: 30px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+    visibility: hidden;
+}
+
+.game .logo, .final .logo{
+    max-width: 100px;
+}
+.game .zone, .final .zone {
+    max-width: 60px;
+}
+
+/*desktop*/
+@media screen and (min-width:1200px){
+    .start, .game, .final{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    button.submit, button.playAgain{
+        max-width: 260px;
+    }
+    .startbtn{
+        max-width: 260px;
+    }
+    .answer-q{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .final .end{
+        max-width: 360px;
+    }
 }
