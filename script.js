@@ -25,9 +25,9 @@ var startingX, startingY, movingX, movingY;
     movingX = evt.touches[0].clientX
     movingY = evt.touches[0].clientY
     dragOver(evt)
+    dragDrop()
   } 
   function touchend() {
-    dragDrop()
     dragEnd()
 }
 
@@ -146,7 +146,6 @@ function Spawn(){
 
 //DRAG TILES
 function dragStart(){
-    console.log("S")
     currTile = this; //this refers to image that was clicked for dragging
     console.log(currTile)
 }
@@ -157,7 +156,6 @@ function dragOver(e){
 }
 
 function dragEnter(e){
-    console.log("ent")
     e.preventDefault();
 }
 
@@ -168,6 +166,7 @@ function dragLeave(){
 function dragDrop(){
     console.log("D")
     otherTile = this; //this refers to image that is being dropped on
+    console.log(currTile)
 }
 
 function dragEnd(){
