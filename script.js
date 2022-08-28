@@ -5,8 +5,23 @@ const playAgain = document.querySelector(".againButton")
 const final = document.querySelector(".final");
 const board = document.getElementById("board");
 const pieces = document.getElementById("pieces");
+const guide1 = document.querySelector(".guide1")
+const guide2 = document.querySelector(".guide2")
+const guide3 = document.querySelector(".guide3")
+const guide4 = document.querySelector(".guide4")
+const guide5 = document.querySelector(".guide5")
+const guide6 = document.querySelector(".guide6")
+const puzzle1 = document.querySelector(".puzzle1")
+const puzzle2 = document.querySelector(".puzzle2")
+const puzzle3 = document.querySelector(".puzzle3")
+const puzzle4 = document.querySelector(".puzzle4")
+const puzzle5 = document.querySelector(".puzzle5")
+const puzzle6 = document.querySelector(".puzzle6")
 
 let startGame = false
+let puzzleSelected;
+let puzzleNumber;
+let p1,p2,p3,p4,p5,p6
 
 var rows = 2
 var columns = 3;
@@ -57,10 +72,221 @@ RenewingTraditionP = [
     {number: 6, image: "./img/Renewing-Tradition_06.jpg"}
 ]
 
+puzzle1.addEventListener("click", () => {
+    if(p1 == false){
+        if(puzzleSelected == puzzle1){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle1.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle1
+            puzzleNumber = puzzle1.getAttribute("data")
+            puzzle1.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+puzzle2.addEventListener("click", () => {
+    if(p2 == false){
+        if(puzzleSelected == puzzle2){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle2.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle2
+            puzzleNumber = puzzle2.getAttribute("data")
+            puzzle2.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+
+puzzle3.addEventListener("click", () => {
+    if(p3 == false){
+        if(puzzleSelected == puzzle3){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle3.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle3
+            puzzleNumber = puzzle3.getAttribute("data")
+            puzzle3.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+
+puzzle4.addEventListener("click", () => {
+    if(p4 == false){
+        if(puzzleSelected == puzzle4){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle4.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle4
+            puzzleNumber = puzzle4.getAttribute("data")
+            puzzle4.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+
+puzzle5.addEventListener("click", () => {
+    if(p5 == false){
+        if(puzzleSelected == puzzle5){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle5.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle5
+            puzzleNumber = puzzle5.getAttribute("data")
+            puzzle5.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+puzzle6.addEventListener("click", () => {
+    if(p6 == false){
+        if(puzzleSelected == puzzle6){
+            puzzleSelected = null
+            puzzleNumber = null
+            puzzle6.style.border = ""
+            return
+        }
+        else{
+            if(puzzleSelected != null){
+                puzzleSelected.style.border = ""
+            }
+            puzzleSelected = puzzle6
+            puzzleNumber = puzzle6.getAttribute("data")
+            puzzle6.style.border = "solid 5px black"
+        }
+    }
+    else{
+        return
+    }
+})
+
+guide1.addEventListener("click", () => {
+    if(puzzleNumber == 1){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide1.style.opacity = "1";
+        guide1.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+
+guide2.addEventListener("click", () => {
+    if(puzzleNumber == 2){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide2.style.opacity = "1";
+        guide2.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+
+guide3.addEventListener("click", () => {
+    if(puzzleNumber == 3){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide3.style.opacity = "1";
+        guide3.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+
+guide4.addEventListener("click", () => {
+    if(puzzleNumber == 4){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide4.style.opacity = "1";
+        guide4.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+guide5.addEventListener("click", () => {
+    if(puzzleNumber == 5){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide5.style.opacity = "1";
+        guide5.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+
+guide6.addEventListener("click", () => {
+    if(puzzleNumber == 6){
+        puzzleSelected.classList.add("right")
+        puzzleSelected.style.border = ""
+        guide6.style.opacity = "1";
+        guide6.classList.add("done")
+        Check()
+    }
+    puzzleSelected.style.border = ""
+    puzzleSelected = null
+})
+
+
+
+
 startButton.addEventListener("click", () => {
     start.classList.add("hide")
     game.classList.remove("hide")
     startGame = true
+    puzzleSelected = null
+    p1 = false
+    p2 = false
+    p3 = false
+    p4 = false
+    p5 = false
+    p6 = false
     Spawn()
 })
 
@@ -92,22 +318,12 @@ function Spawn(){
     //initialize the 3 x 2 board
     for(let r = 1; r < (rows + 1); r ++){
         for(let c = 1; c < (columns + 1); c++){
-            let tile = document.createElement("img")
             i = i + 1
-            tile.classList.add("guide")
-            tile.setAttribute("data", puzzlePieces[i].number)
-            tile.src = puzzlePieces[i].image
 
-            //DRAG FUNCTIONALITY
-            tile.addEventListener("dragstart", dragStart)   //click on img to drag
-            tile.addEventListener("dragover", dragOver)     //drag an img
-            tile.addEventListener("dragenter", dragEnter)   // dragging an image into another one
-            tile.addEventListener("dragleave", dragLeave)   //dragging an image away from another one
-            tile.addEventListener("drop", dragDrop)         //drop an image onto another
-            tile.addEventListener("dragend", dragEnd)       //after youcomplete dragDrop
-            document.getElementById("pieces").append(tile)
+            let current = ".guide" + (i + 1)
             
-            document.getElementById("board").append(tile);
+            let tile = document.querySelector(current)
+            tile.src = puzzlePieces[i].image
         }
     }
 
@@ -128,24 +344,46 @@ function Spawn(){
     }
 
     for (let i = 0; i < pieces.length; i ++){
-        let tile = document.createElement("img")
+        let current = ".puzzle" + (i + 1)
+        let tile = document.querySelector(current)
         tile.src = pieces[i].image
         tile.setAttribute("data", pieces[i].number)
-
-        //DRAG FUNCTIONALITY
-        tile.addEventListener("dragstart", dragStart)   //click on img to drag
-        tile.addEventListener("dragover", dragOver)     //drag an img
-        tile.addEventListener("dragenter", dragEnter)   // dragging an image into another one
-        tile.addEventListener("dragleave", dragLeave)   //dragging an image away from another one
-        tile.addEventListener("drop", dragDrop)         //drop an image onto another
-        tile.addEventListener("dragend", dragEnd)       //after youcomplete dragDrop
-        
-        document.getElementById("pieces").append(tile)
     }
 }
 
+function Check(){
+    if(puzzleSelected == puzzle1){
+        p1 = true
+    }
+    if(puzzleSelected == puzzle2){
+        p2 = true
+    }
+    if(puzzleSelected == puzzle3){
+        p3 = true
+    }
+    if(puzzleSelected == puzzle4){
+        p4 = true
+    }
+    if(puzzleSelected == puzzle5){
+        p5 = true
+    }
+    if(puzzleSelected == puzzle6){
+        p6 = true
+    }
+    let correct = document.querySelectorAll(".done")
+        if(correct.length == 6){
+            let delay = setTimeout(() => {
+                startGame = false
+                remove()
+                final.classList.remove("hide")
+                game.classList.add("hide")
+            }, 1000);
+            
+        }
+}
+
 //DRAG TILES
-function dragStart(){
+/*function dragStart(){
     currTile = this; //this refers to image that was clicked for dragging
     console.log(currTile)
 }
@@ -208,9 +446,22 @@ function dragEnd(){
         return
     }
     
-}
+}*/
 
 function remove(){
+    let right = document.querySelectorAll(".right")
+    let done = document.querySelectorAll(".done")
+
+    right.forEach((item) =>{
+        item.classList.remove("right")
+    })
+    done.forEach((item) =>{
+        item.classList.remove("done")
+        item.style.opacity = "0.3";
+    })
+  }
+
+/*function remove(){
     removeAllChildNodes(board)
     removeAllChildNodes(pieces)
   }
@@ -219,4 +470,4 @@ function remove(){
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
-}
+}*/

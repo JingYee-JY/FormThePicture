@@ -21,8 +21,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
     padding-top: 15px;
+    padding-bottom: 60px;
 }
 
 .logo, .zone{
@@ -34,11 +34,13 @@ body {
     margin-top: auto;
     
 }
+
 .title{
     width: 100%;
     padding: 5%;
     box-sizing: border-box;
 }
+
 button{
     background-color: transparent;
     border: 0px;
@@ -55,7 +57,7 @@ button{
     height: auto;
 }
 
-button.submit, button.playAgain{
+button.playAgain{
     max-width: 75%;
     display: flex;
     margin: 0 auto;
@@ -70,8 +72,10 @@ button.submit, button.playAgain{
     height: 300px;
     margin: 0 auto;
     gap: 1%;
-    margin-bottom: 5%;
-    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 98px);
     flex-wrap: wrap;
 }
 
@@ -85,22 +89,30 @@ button.submit, button.playAgain{
     width: 305px;
     height: 302px;
     gap: 1%;
+    padding: 5px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 98px);
+    grid-template-rows: repeat(2, 149px);
+    align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 #pieces img{
+    justify-self: center;
     cursor: pointer;
     z-index: 1;
-    width: 99px;
-    height: 149px;
+    width: 90px;
+    height: 140px;
+    z-index: 1;
 }
 
 .instruction {
     justify-content: center;
     text-align: center;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 22px;
     font-weight: 500;
 }
@@ -113,8 +125,17 @@ button.submit, button.playAgain{
     opacity: 100%;
 }
 
-.guide{
+.guide1,.guide2,.guide3,.guide4,.guide5, .guide6{
     opacity: 30%;
+}
+.right{
+    opacity: 0%;
+}
+.text p {
+    color: blue;
+    font-style: italic;
+    margin: 0;
+    font-size: small;
 }
 
 .final{
@@ -146,13 +167,69 @@ button{
     max-width: 60px;
 }
 
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .logo{
+        max-width: 250px;
+    }
+    .title{
+    padding: 5% 15%;
+    }
+    .question{
+        font-size: 32px;
+    }
+    .answer-q{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    button.playAgain{
+        max-width: 450px;
+    }
+    .final .end{
+        max-width: 450px;
+    }
+    #board{
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+        gap: 1%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #board img{
+        width: 195px;
+        height: 301px;
+        cursor: pointer;
+    }
+    
+    #pieces{
+        width: 600px;
+        height: 600px;
+        gap: 1%;
+        margin: 0 auto;
+        margin-bottom: 15%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #pieces img{
+        cursor: pointer;
+        z-index: 1;
+        width: 195px;
+        height: 301px;
+    }
+
+}
+
 /*desktop*/
 @media screen and (min-width:1200px){
     .start, .game, .final{
         max-width: 500px;
         margin: 0 auto;
     }
-    button.submit, button.playAgain{
+    button.playAgain{
         max-width: 260px;
     }
     .startbtn{

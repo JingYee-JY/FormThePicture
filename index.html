@@ -10,10 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body ontouchstart = "touchstart(event)"
-ontouchmove ="touchmove(event)"
-ontouchend ="touchend(event)">
+<body>
     <div class="start">
         <div class="top">
             <img class="logo" src="./img/logo.png">
@@ -35,12 +34,30 @@ ontouchend ="touchend(event)">
             <img class="logo" src="./img/logo.png">
             <img class="zone" src="./img/zone4.png">
         </div>
-        <div class="instruction">
-            <p>拼出下列图片</p>
-            <p>Form the picture below</p>
+        <div id="board">
+            <img class="guide1">
+            <img class="guide2">
+            <img class="guide3">
+            <img class="guide4">
+            <img class="guide5">
+            <img class="guide6">
         </div>
-        <div id="board"></div>
-        <div id="pieces"></div>
+        <div class="instruction">
+            <p>将拼图放入上图中</p>
+            <p>Place the puzzle into the picture above</p>
+            <div class="text">
+                <p>点击下面的拼图以选择,并点击顶部以放置它</p>
+                <p>Click on the below puzzle to select and click on top to place it</p>
+            </div>
+        </div>
+        <div id="pieces">
+            <img class="puzzle1">
+            <img class="puzzle2">
+            <img class="puzzle3">
+            <img class="puzzle4">
+            <img class="puzzle5">
+            <img class="puzzle6">
+        </div>
     </div>
     <div class="final hide">
         <div class="top">
