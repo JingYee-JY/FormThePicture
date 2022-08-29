@@ -18,7 +18,6 @@ const puzzle4 = document.querySelector(".puzzle4")
 const puzzle5 = document.querySelector(".puzzle5")
 const puzzle6 = document.querySelector(".puzzle6")
 
-let startGame = false
 let puzzleSelected;
 let puzzleNumber;
 let p1,p2,p3,p4,p5,p6
@@ -279,7 +278,6 @@ guide6.addEventListener("click", () => {
 startButton.addEventListener("click", () => {
     start.classList.add("hide")
     game.classList.remove("hide")
-    startGame = true
     puzzleSelected = null
     p1 = false
     p2 = false
@@ -293,7 +291,13 @@ startButton.addEventListener("click", () => {
 playAgain.addEventListener("click", () => {
     final.classList.add("hide")
     game.classList.remove("hide")
-    startGame = true
+    puzzleSelected = null
+    p1 = false
+    p2 = false
+    p3 = false
+    p4 = false
+    p5 = false
+    p6 = false
     Spawn()
 })
 
