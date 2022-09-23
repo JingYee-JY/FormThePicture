@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2PSKBL');</script>
+<!-- End Google Tag Manager -->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRFS85WC66"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRFS85WC66');
+</script>
     <title>Form The Picture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +29,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2PSKBL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <div class="start">
         <div class="top">
             <img class="logo" src="./img/logo.png">
@@ -34,29 +54,14 @@
             <img class="logo" src="./img/logo.png">
             <img class="zone" src="./img/zone4.png">
         </div>
-        <div id="board">
-            <img class="guide1">
-            <img class="guide2">
-            <img class="guide3">
-            <img class="guide4">
-            <img class="guide5">
-            <img class="guide6">
-        </div>
+        <div class="round"></div>
         <div class="instruction">
-            <p>将拼图放入上图中</p>
-            <p>Place the puzzle into the picture above</p>
-            <div class="text">
-                <p>点击下面的拼图以选择,并点击顶部以放置它</p>
-                <p>Click on the below puzzle to select and click on top to place it</p>
-            </div>
+            <p>把正确的拼图碎片点击到拼图中</p>
+            <p>Tap the correct pieces into the puzzle</p>
+        </div>
+        <div id="board">
         </div>
         <div id="pieces">
-            <img class="puzzle1">
-            <img class="puzzle2">
-            <img class="puzzle3">
-            <img class="puzzle4">
-            <img class="puzzle5">
-            <img class="puzzle6">
         </div>
     </div>
     <div class="final hide">
@@ -64,10 +69,12 @@
             <img class="logo" src="./img/logo.png">
             <img class="zone" src="./img/zone4.png">
         </div>
-        <img class="title" src="./img/title.png">
         <img class="end" src="./img/congratulation.png">
         <button class="againButton">
             <img class="startbtn" src="./img/playAgain.png">
+        </button>
+        <button class="nextZone" onclick="window.location.href='https://gimme.sg/activations/SCCC/zone5/game1/';">
+            <img class="startbtn" src="./img/nextGame.png">
         </button>
     </div>
     <script src="script.js"></script>

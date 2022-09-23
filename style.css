@@ -1,9 +1,13 @@
 /*mobile*/
 body {
     font-family: 'noto';
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #FDDAF3;
+    position: fixed;
+    overflow: hidden;
 }
 
 *{
@@ -21,13 +25,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 60px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .logo, .zone{
     max-width: 150px;
-    padding-left: 15px
+    padding-left: 20px
 }
 
 .game-title{
@@ -36,9 +40,10 @@ body {
 }
 
 .title{
-    width: 100%;
-    padding: 5%;
-    box-sizing: border-box;
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
+    padding: 0;
 }
 
 button{
@@ -48,8 +53,20 @@ button{
     padding: 2.5% 5%;
 }
 
-.cover-bottom{
-    margin-top: auto;
+.round{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    width: 60px;
+    margin: 0 auto;
+    border-radius: 30px;
+    color: white;
+    background-color: #FF6DD6;
+    -webkit-box-shadow: 0px 15px 0px 0px #624EA6; 
+    box-shadow: 0px 5px 0px 0px #624EA6;
+}
+.round p{
+    margin: 0;
 }
 
 .cover-bottom img{
@@ -68,53 +85,51 @@ button.playAgain{
 }
 
 #board{
-    width: 300px;
-    height: 300px;
+    width: 285px;
+    height: 265px;
     margin: 0 auto;
     gap: 1%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 2%;
     display: grid;
     grid-template-columns: repeat(3, 98px);
     flex-wrap: wrap;
 }
 
 #board img{
-    width: 98px;
-    height: 148px;
+    width: auto;
+    height: 130px;
     cursor: pointer;
 }
 
 #pieces{
-    width: 305px;
-    height: 302px;
+    width: 300px;
+    height: 140px;
     gap: 1%;
     padding: 5px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 98px);
-    grid-template-rows: repeat(2, 149px);
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    background: white;
 }
 
 #pieces img{
     justify-self: center;
     cursor: pointer;
     z-index: 1;
-    width: 90px;
-    height: 140px;
+    width: auto;
+    height: 130px;
     z-index: 1;
 }
 
 .instruction {
     justify-content: center;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
+	padding:15px 20px;
 }
 
 .instruction p{
@@ -125,7 +140,7 @@ button.playAgain{
     opacity: 100%;
 }
 
-.guide1,.guide2,.guide3,.guide4,.guide5, .guide6{
+.question{
     opacity: 30%;
 }
 .right{
@@ -142,10 +157,21 @@ button.playAgain{
     height: 100vh;
     width: 100%;
 }
+.final .title{
+    display: flex;
+    margin: 0 auto;
+    max-width: 50%;
+}
+.final .title{
+    display: flex;
+    margin: 0 auto;
+    max-width: 50%;
+}
 .final .end{
     display: flex;
     margin: 0 auto;
     max-width: 60%;
+    margin-top: 100px;
 }
 button.playAgain{
     margin-top: 30px;
@@ -164,13 +190,20 @@ button{
     max-width: 100px;
 }
 .game .zone, .final .zone {
-    max-width: 60px;
+    max-width: 120px;
+}
+
+.againButton{
+	margin-top:15px;
 }
 
 /*ipad*/
 @media screen and (min-width: 768px) and (max-width: 1199px){
     .logo{
         max-width: 250px;
+    }
+    .startbtn{
+        max-width: 400px;
     }
     .title{
     padding: 5% 15%;
@@ -187,6 +220,7 @@ button{
     }
     .final .end{
         max-width: 450px;
+        margin-top: 200px;
     }
     #board{
         width: 600px;
@@ -220,7 +254,6 @@ button{
         width: 195px;
         height: 301px;
     }
-
 }
 
 /*desktop*/
@@ -229,17 +262,15 @@ button{
         max-width: 500px;
         margin: 0 auto;
     }
-    button.playAgain{
-        max-width: 260px;
-    }
     .startbtn{
-        max-width: 260px;
+        max-width: 225px;
     }
     .answer-q{
         max-width: 360px;
         margin: 0 auto;
     }
     .final .end{
-        max-width: 360px;
+        max-width: 250px;
+        margin-top: 50px;
     }
 }
