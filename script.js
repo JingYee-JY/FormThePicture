@@ -386,72 +386,6 @@ function Check(){
         }
 }
 
-//DRAG TILES
-/*function dragStart(){
-    currTile = this; //this refers to image that was clicked for dragging
-    console.log(currTile)
-}
-
-function dragOver(e){
-    console.log("o")
-    e.preventDefault();
-}
-
-function dragEnter(e){
-    e.preventDefault();
-}
-
-function dragLeave(){
-    
-}
-
-function dragDrop(){
-    console.log("D")
-    otherTile = this; //this refers to image that is being dropped on
-    console.log(currTile)
-}
-
-function dragEnd(){
-    if(currTile.classList == null || otherTile.classList == null){
-        return
-    }
-    console.log("c"+ currTile.classList)
-    console.log("o" + otherTile.classList)
-    if(currTile.classList == "guide" || currTile.src.includes("blank")){
-        return
-    }
-
-    let currValue = currTile.getAttribute("data")
-    let otherValue = otherTile.getAttribute("data")
-
-    console.log("c" + currValue)
-    console.log("o", otherValue)
-    if(currValue == otherValue){
-        otherTile.src = "./img/blank.png"
-        otherTile.classList.remove("guide")
-        otherTile.classList.add("done")
-        let currImg = currTile.src
-        let otherImg = otherTile.src
-        currTile.src = otherImg;
-        otherTile.src = currImg;
-
-        let correct = document.querySelectorAll(".done")
-        if(correct.length == 6){
-            let delay = setTimeout(() => {
-                startGame = false
-                remove();
-                final.classList.remove("hide")
-                game.classList.add("hide")
-            }, 1000);
-            
-        }
-    }
-    else{
-        return
-    }
-    
-}*/
-
 function remove(){
     let right = document.querySelectorAll(".right")
     let done = document.querySelectorAll(".done")
@@ -464,14 +398,3 @@ function remove(){
         item.style.opacity = "0.3";
     })
   }
-
-/*function remove(){
-    removeAllChildNodes(board)
-    removeAllChildNodes(pieces)
-  }
-
-  function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}*/
